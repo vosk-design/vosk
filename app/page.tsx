@@ -6,7 +6,7 @@ import Video from "@/components/video";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-start w-screen min-h-dvh max-w-md mx-auto text-sm max-md:px-4 py-[10vh] md:py-[15dvh]">
+    <div className="flex flex-col justify-start w-fit max-w-md mx-auto text-sm max-md:px-4 py-[10vh] md:py-[15dvh] px-4 ">
       <div className="flex flex-row justify-between w-full">
         <div className="flex flex-col gap-0.5">
           <p className="font-medium">VOSK</p>
@@ -61,7 +61,7 @@ export default function Home() {
         </p>
         <hr className="opacity-10 my-5" />
         <div className="flex flex-col gap-6">
-          {items.slice(0, 4).map((item, index) => (
+          {items.map((item, index) => (
             <div key={index} className="flex flex-col gap-2 group">
               <div className="flex flex-row gap-2 items-center justify-between">
                 <p className="font-medium">{item.title}</p>
@@ -101,7 +101,13 @@ export default function Home() {
                         />
                       );
                     case "video":
-                      return <Video src={slide.image} key={index} />;
+                      return (
+                        <Video
+                          src={slide.image}
+                          key={index}
+                          isArticle={false}
+                        />
+                      );
                     default:
                       return null;
                   }

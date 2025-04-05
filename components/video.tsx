@@ -3,7 +3,13 @@
 import { cn } from "@/utils/cn";
 import { useState, useRef, useEffect } from "react";
 
-export default function Video({ src }: { src: string }) {
+export default function Video({
+  src,
+  isArticle,
+}: {
+  src: string;
+  isArticle: boolean;
+}) {
   const [isLoaded, setIsLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -27,8 +33,9 @@ export default function Video({ src }: { src: string }) {
       onCanPlay={() => setIsLoaded(true)}
       onPlay={() => setIsLoaded(true)}
       className={cn(
-        "object-cover w-full h-auto rounded-2xl snap-center border border-gray-200 bg-gray-300 max-w-4xl",
-        !isLoaded && "animate-pulse"
+        "object-cover w-full rounded-2xl snap-center border border-gray-200 bg-gray-300 max-w-4xl",
+        !isLoaded && "animate-pulse",
+        isArticle ? "w-full h-full" : "max-h-[250px] h-full"
       )}
     />
   );

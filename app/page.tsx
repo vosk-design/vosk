@@ -58,6 +58,61 @@ export default function Home() {
             regards, ‍
           </p>
           <hr className="opacity-10 my-10" />
+          <div className="flex flex-col gap-6">
+            {items.map((item, index) => (
+              <div key={index} className="flex flex-col gap-2 group">
+                <div className="flex flex-row gap-2 items-center justify-between">
+                  <p className="font-medium">{item.title}</p>
+                  <svg
+                    height="16"
+                    strokeLinejoin="round"
+                    viewBox="0 0 16 16"
+                    width="16"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M6.75011 4H6.00011V5.5H6.75011H9.43945L5.46978 9.46967L4.93945 10L6.00011 11.0607L6.53044 10.5303L10.499 6.56182V9.25V10H11.999V9.25V5C11.999 4.44772 11.5512 4 10.999 4H6.75011Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="flex flex-row gap-2 overflow-x-auto snap-x snap-mandatory rounded-2xl">
+                  {item.slides.map((slide, index) => {
+                    switch (slide.type) {
+                      case "image":
+                        return (
+                          <Image
+                            key={index}
+                            src={slide.image}
+                            alt={slide.text}
+                            width={500}
+                            height={500}
+                            loading="lazy"
+                            className="object-cover w-full h-full max-h-[250px] rounded-2xl snap-center border border-gray-200"
+                          />
+                        );
+                      case "video":
+                        return (
+                          <video
+                            key={index}
+                            src={slide.image}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                            className="object-cover w-full h-full max-h-[250px] rounded-2xl snap-center border border-gray-200 bg-gray-300"
+                          />
+                        );
+                      default:
+                        return null;
+                    }
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </main>

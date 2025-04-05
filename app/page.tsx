@@ -119,7 +119,7 @@ export default function Home() {
               </div>
               <div className="flex flex-row gap-2 overflow-x-auto snap-x snap-mandatory rounded-2xl no-scrollbar h-[250px]">
                 {item.slides
-                  .filter((slide) => slide.type !== "text")
+                  .filter((slide) => slide.type === "image")
                   .slice(0, 3)
                   .map((slide, index) => {
                     switch (slide.type) {

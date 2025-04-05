@@ -7,7 +7,7 @@ export default function Back() {
   return (
     <button
       onClick={() => router.back()}
-      className="flex flex-col items-center gap-2 fixed top-10 left-10 active:opacity-25 hover:opacity-50 transition-opacity duration-300 cursor-pointer"
+      className="hidden xl:flex flex-col items-center gap-2 fixed top-10 left-10 active:opacity-25 hover:opacity-50 transition-opacity duration-300 cursor-pointer"
     >
       <div className="flex items-center gap-2 font-mono text-sm uppercase">
         <svg height="16" strokeLinejoin="round" viewBox="0 0 16 16" width="16">

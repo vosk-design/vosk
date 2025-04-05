@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { items } from "./items";
+import Video from "@/components/video";
 
 export default function Home() {
   return (
     <main className="flex flex-col">
-      <div className="flex flex-col justify-center w-screen min-h-dvh max-w-md mx-auto text-sm py-[20dvh]">
+      <div className="flex flex-col justify-center w-screen min-h-dvh max-w-md mx-auto text-sm py-[10vh] md:py-[20dvh] max-md:px-4">
         <div className="flex flex-row justify-between w-full">
           <div className="flex flex-col gap-0.5">
             <p className="font-medium">VOSK</p>
@@ -46,7 +47,7 @@ export default function Home() {
             <li>Tools</li>
           </ul>
 
-          <p>
+          <p className="italic">
             Our goal is to design change.
             <br />
             To announce it to the world.
@@ -57,7 +58,7 @@ export default function Home() {
             We remain at your disposal for any further information, Best
             regards, ‍
           </p>
-          <hr className="opacity-10 my-10" />
+          <hr className="opacity-10 my-5" />
           <div className="flex flex-col gap-6">
             {items.map((item, index) => (
               <div key={index} className="flex flex-col gap-2 group">
@@ -68,6 +69,7 @@ export default function Home() {
                     strokeLinejoin="round"
                     viewBox="0 0 16 16"
                     width="16"
+                    className="hidden md:block md:opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   >
                     <path
                       fillRule="evenodd"
@@ -77,10 +79,13 @@ export default function Home() {
                     ></path>
                   </svg>
                 </div>
-                <div className="flex flex-row gap-2 overflow-x-auto snap-x snap-mandatory rounded-2xl">
+                <div className="flex flex-row gap-2 overflow-x-auto snap-x snap-mandatory rounded-2xl no-scrollbar">
                   {item.slides.map((slide, index) => {
                     switch (slide.type) {
                       case "image":
+                        const image = slide.image;
+                        const imageWithoutQParams = image.split("q=")[0];
+                        const ImageWithNewQParams = imageWithoutQParams + "q=1";
                         return (
                           <Image
                             key={index}
@@ -89,22 +94,13 @@ export default function Home() {
                             width={500}
                             height={500}
                             loading="lazy"
-                            className="object-cover w-full h-full max-h-[250px] rounded-2xl snap-center border border-gray-200"
+                            placeholder="blur"
+                            blurDataURL={ImageWithNewQParams}
+                            className="object-cover w-full h-[250px] rounded-2xl snap-center border border-gray-200"
                           />
                         );
                       case "video":
-                        return (
-                          <video
-                            key={index}
-                            src={slide.image}
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            preload="metadata"
-                            className="object-cover w-full h-full max-h-[250px] rounded-2xl snap-center border border-gray-200 bg-gray-300"
-                          />
-                        );
+                        return <Video src={slide.image} key={index} />;
                       default:
                         return null;
                     }

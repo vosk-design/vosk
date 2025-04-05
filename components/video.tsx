@@ -33,9 +33,9 @@ export default function Video({
       onCanPlay={() => setIsLoaded(true)}
       onPlay={() => setIsLoaded(true)}
       className={cn(
-        "object-cover w-full rounded-2xl snap-center border border-gray-200 bg-gray-300 max-w-4xl",
+        "object-cover w-full rounded-2xl snap-center border border-gray-200 bg-gray-300 max-w-4xl z-10 peer-hover:opacity-25 transition-all duration-300 peer-hover:blur-sm",
         !isLoaded && "animate-pulse",
-        isArticle ? "w-full h-full" : "max-h-[250px] h-full"
+        isArticle ? "w-full h-full" : "h-[250px]"
       )}
     />
   );

@@ -1,8 +1,8 @@
-"use client";
-
 import Image from "next/image";
 import { items } from "./items";
 import Video from "@/components/video";
+import Link from "next/link";
+import LogoVideo from "@/components/logo-video";
 
 export default function Home() {
   return (
@@ -59,10 +59,47 @@ export default function Home() {
           We remain at your disposal for any further information, Best regards,
           ‍
         </p>
+        <div className="flex flex-col">
+          <LogoVideo />
+          <div className="flex flex-row gap-2 mt-10 items-center justify-start *:opacity-50 *:hover:opacity-100 transition-opacity duration-300">
+            <Link
+              href="https://t.me/sasha_bazan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Telegram
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/vosk/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </Link>
+            <Link
+              href="https://www.instagram.com/vosk.design/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </Link>
+            <Link
+              href="https://www.behance.net/VOSK"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Behance
+            </Link>
+          </div>
+        </div>
         <hr className="opacity-10 my-5" />
         <div className="flex flex-col gap-6">
           {items.map((item, index) => (
-            <div key={index} className="flex flex-col gap-2 group">
+            <Link
+              href={`/${item.slug}`}
+              key={index}
+              className="flex flex-col gap-2 group"
+            >
               <div className="flex flex-row gap-2 items-center justify-between">
                 <p className="font-medium">{item.title}</p>
                 <svg
@@ -80,40 +117,43 @@ export default function Home() {
                   ></path>
                 </svg>
               </div>
-              <div className="flex flex-row gap-2 overflow-x-auto snap-x snap-mandatory rounded-2xl no-scrollbar">
-                {item.slides.map((slide, index) => {
-                  switch (slide.type) {
-                    case "image":
-                      const image = slide.image;
-                      const imageWithoutQParams = image.split("q=")[0];
-                      const ImageWithNewQParams = imageWithoutQParams + "q=1";
-                      return (
-                        <Image
-                          key={index}
-                          src={slide.image}
-                          alt={slide.text}
-                          width={500}
-                          height={500}
-                          loading="lazy"
-                          placeholder="blur"
-                          blurDataURL={ImageWithNewQParams}
-                          className="object-cover w-full h-[250px] rounded-2xl snap-center border border-gray-200"
-                        />
-                      );
-                    case "video":
-                      return (
-                        <Video
-                          src={slide.image}
-                          key={index}
-                          isArticle={false}
-                        />
-                      );
-                    default:
-                      return null;
-                  }
-                })}
+              <div className="flex flex-row gap-2 overflow-x-auto snap-x snap-mandatory rounded-2xl no-scrollbar h-[250px]">
+                {item.slides
+                  .filter((slide) => slide.type !== "text")
+                  .slice(0, 3)
+                  .map((slide, index) => {
+                    switch (slide.type) {
+                      case "image":
+                        const image = slide.image;
+                        const imageWithoutQParams = image.split("q=")[0];
+                        const ImageWithNewQParams = imageWithoutQParams + "q=1";
+                        return (
+                          <Image
+                            key={index}
+                            src={slide.image}
+                            alt={slide.text}
+                            width={500}
+                            height={500}
+                            loading="lazy"
+                            placeholder="blur"
+                            blurDataURL={ImageWithNewQParams}
+                            className="object-cover w-full h-[250px] rounded-2xl snap-center border border-gray-200"
+                          />
+                        );
+                      case "video":
+                        return (
+                          <Video
+                            src={slide.image}
+                            key={index}
+                            isArticle={false}
+                          />
+                        );
+                      default:
+                        return null;
+                    }
+                  })}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,6 +1,7 @@
 export const items = [
   {
     title: "Apartments 9",
+    slug: "appartments-9",
     slides: [
       {
         slide_number: 1,
@@ -120,6 +121,7 @@ export const items = [
   },
   {
     title: "Masha Egorova",
+    slug: "masha-egorova",
     slides: [
       {
         slide_number: 1,
@@ -199,6 +201,7 @@ export const items = [
   },
   {
     title: "BQ Studio",
+    slug: "bq-studio",
     slides: [
       {
         slide_number: 1,
@@ -319,13 +322,14 @@ export const items = [
       {
         slide_number: 18,
         image: "",
-        text: "VOSK\n\nDenis Valetin (Creative Director)\nGerman Zhevmerev (Web Designer)\nBayel Kulikovsky (Frontend/Backend Developer)\nSasha Bazan (Customer Success Manager)\nJulia Peretyagina (Customer Success Manager)\nMaria Sorochenko (Project Manager)",
+        text: "VOSK\n\nDenis Valetin (Creative Director)\nGerman Zhevmerev (Web Designer)\nBaiel Kulikovsky (Design Engineer)\nSasha Bazan (Customer Success Manager)\nJulia Peretyagina (Customer Success Manager)\nMaria Sorochenko (Project Manager)",
         type: "text",
       },
     ],
   },
   {
     title: "Umniy Vybor",
+    slug: "umnyi-vybor",
     slides: [
       {
         slide_number: 1,
@@ -433,6 +437,7 @@ export const items = [
   },
   {
     title: "BQ Studio",
+    slug: "bq-studio",
     slides: [
       {
         slide_number: 1,
@@ -574,6 +579,7 @@ export const items = [
   },
   {
     title: "Plancy",
+    slug: "plancy",
     slides: [
       {
         slide_number: 1,
@@ -687,6 +693,7 @@ export const items = [
   },
   {
     title: "Annabel's",
+    slug: "annabels",
     slides: [
       {
         slide_number: 1,
@@ -814,6 +821,7 @@ export const items = [
   },
   {
     title: "Alrosa Diamonds Lethe",
+    slug: "alrosa-diamonds-lethe",
     slides: [
       {
         slide_number: 1,
@@ -922,6 +930,7 @@ export const items = [
   },
   {
     title: "Stemps",
+    slug: "stemps",
     slides: [
       {
         slide_number: 1,
@@ -1050,6 +1059,7 @@ export const items = [
   },
   {
     title: "Alrosa Diamonds",
+    slug: "alrosa-diamonds",
     slides: [
       {
         slide_number: 1,
@@ -1198,6 +1208,7 @@ export const items = [
   },
   {
     title: "Hilights",
+    slug: "hilights",
     slides: [
       {
         slide_number: 1,
@@ -1278,6 +1289,7 @@ export const items = [
   },
   {
     title: "Dynamic Labs",
+    slug: "dynamic-labs",
     slides: [
       {
         slide_number: 1,
@@ -1398,6 +1410,7 @@ export const items = [
   },
   {
     title: "AttoLabs",
+    slug: "atto-labs",
     slides: [
       {
         slide_number: 1,
@@ -1538,13 +1551,14 @@ export const items = [
       {
         slide_number: 21,
         image: "",
-        text: "Art Direction by Denis Valetin\nDesign by Denis Dobrovolsky\nClient Success Management by Julia Peretiagina & Alex Bazan\nProject Management by Jenya Andreeva",
+        text: "Art Direction by Denis Valetin\nDesign by Denis Dobrovolsky\nClient Success Management by Julia Peretiagina & Sasha Bazan\nProject Management by Jenya Andreeva",
         type: "text",
       },
     ],
   },
   {
     title: "Infra Fiber",
+    slug: "infra-fiber",
     slides: [
       {
         slide_number: 1,
@@ -1637,13 +1651,14 @@ export const items = [
       {
         slide_number: 14,
         image: "",
-        text: "Credits:\n\nDenis Valetin (Design & Art Direction)\nGerman Zhevmerev (Case)\nAlex Bazan (Client Success Managment)\nValery Yaremenko (3D)\nAlena Khudyakova (Generative Art)",
+        text: "Credits:\n\nDenis Valetin (Design & Art Direction)\nGerman Zhevmerev (Case)\nSasha Bazan (Client Success Managment)\nValery Yaremenko (3D)\nAlena Khudyakova (Generative Art)",
         type: "text",
       },
     ],
   },
   {
     title: "Greymatter",
+    slug: "greymatter",
     slides: [
       {
         slide_number: 1,
@@ -1834,13 +1849,14 @@ export const items = [
       {
         slide_number: 28,
         image: "",
-        text: "Credits:\n\nVasilii Podriadchikov (art direction & design)\nAlex Bazan (design)\nLisa Pautova (case design)\nSasha Solncev (motion)\nDima Alexandrov (motion)",
+        text: "Credits:\n\nVasilii Podriadchikov (art direction & design)\nSasha Bazan (design)\nLisa Pautova (case design)\nSasha Solncev (motion)\nDima Alexandrov (motion)",
         type: "text",
       },
     ],
   },
   {
     title: "Design AID",
+    slug: "design-aid",
     slides: [
       {
         slide_number: 1,
@@ -2022,13 +2038,14 @@ export const items = [
       {
         slide_number: 27,
         image: "",
-        text: "Credits:\n\nVasilii Podriadchikov (creative direction & brand design)\nMisha Derichenko (brand design)\nDenis Valetin (web design)\nAlex Bazan (client success management)\nJenya Andreeva (project management)\nLena Kalachova (motion design)",
+        text: "Credits:\n\nVasilii Podriadchikov (creative direction & brand design)\nMisha Derichenko (brand design)\nDenis Valetin (web design)\nSasha Bazan (client success management)\nJenya Andreeva (project management)\nLena Kalachova (motion design)",
         type: "text",
       },
     ],
   },
   {
     title: "IND",
+    slug: "ind",
     slides: [
       {
         slide_number: 1,
@@ -2156,6 +2173,7 @@ export const items = [
   },
   {
     title: "Architone",
+    slug: "architone",
     slides: [
       {
         slide_number: 1,
@@ -2326,13 +2344,14 @@ export const items = [
       {
         slide_number: 25,
         image: "",
-        text: "Credits:\n\nVasilii Podriadchikov (art direction)\nAlex Bazan (brand/digital design & management)\nAlexandra Korbankova (brand design)\nAlex Kovalevsky (3d artist)\nStas Mishin (front-end, back-end)",
+        text: "Credits:\n\nVasilii Podriadchikov (art direction)\nSasha Bazan (brand/digital design & management)\nAlexandra Korbankova (brand design)\nAlex Kovalevsky (3d artist)\nStas Mishin (front-end, back-end)",
         type: "text",
       },
     ],
   },
   {
     title: "G8",
+    slug: "g8",
     slides: [
       {
         slide_number: 1,
@@ -2454,13 +2473,14 @@ export const items = [
       {
         slide_number: 18,
         image: "",
-        text: "Credits:\n\nVasilii Podriadchikov (art direction & brand design)\nAlex Bazan (art direction & brand design)\nVlad Md Golam (creative coding, AI tool)\nAlexandra Korbankova (brand design)\nAlex Kovalevsky (3d artist)",
+        text: "Credits:\n\nVasilii Podriadchikov (art direction & brand design)\nSasha Bazan (art direction & brand design)\nVlad Md Golam (creative coding, AI tool)\nAlexandra Korbankova (brand design)\nAlex Kovalevsky (3d artist)",
         type: "text",
       },
     ],
   },
   {
     title: "Boxmate",
+    slug: "boxmate",
     slides: [
       {
         slide_number: 1,
@@ -2555,13 +2575,14 @@ export const items = [
       {
         slide_number: 14,
         image: "",
-        text: "Credits:\n\nVasilii Podriadchikov (art direction & brand design)\nMisha Derichenko (brand design)\nAlex Bazan (client success management)\nJenya Andreeva (project management)\nSasha Solncev (motion design)",
+        text: "Credits:\n\nVasilii Podriadchikov (art direction & brand design)\nMisha Derichenko (brand design)\nSasha Bazan (client success management)\nJenya Andreeva (project management)\nSasha Solncev (motion design)",
         type: "text",
       },
     ],
   },
   {
     title: "Kampong Gelamorous",
+    slug: "kampong-gelamorous",
     slides: [
       {
         slide_number: 1,
@@ -2705,13 +2726,14 @@ export const items = [
       {
         slide_number: 21,
         image: "",
-        text: "Credits:\n\nVasilii Podriadchikov (art direction & design)\nAlex Bazan (design)\nMisha Derichenko (design)\nLena Kalacheva (motion design)",
+        text: "Credits:\n\nVasilii Podriadchikov (art direction & design)\nSasha Bazan (design)\nMisha Derichenko (design)\nLena Kalacheva (motion design)",
         type: "text",
       },
     ],
   },
   {
     title: "Rhizome Bureau",
+    slug: "rhizome-bureau",
     slides: [
       {
         slide_number: 1,
@@ -2791,13 +2813,14 @@ export const items = [
       {
         slide_number: 12,
         image: "",
-        text: "Credits:\n\nVasilii Podriadchikov (creative direction, design)\nDenis Valetin (digital design)\nVlad Danilchenko (Front-end)\nPavel Danilchenko (Back-end)\nAlex Bazan (client success management)",
+        text: "Credits:\n\nVasilii Podriadchikov (creative direction, design)\nDenis Valetin (digital design)\nVlad Danilchenko (Front-end)\nPavel Danilchenko (Back-end)\nSasha Bazan (client success management)",
         type: "text",
       },
     ],
   },
   {
     title: "Design AID",
+    slug: "design-aid",
     slides: [
       {
         slide_number: 1,
@@ -2878,7 +2901,7 @@ export const items = [
       {
         slide_number: 12,
         image: "",
-        text: "Credits:\n\nVasilii Podriadchikov (creative direction)\nDenis Valetin (web design)\nMisha Derichenko (brand design)\nVlad Danilchenko (Front-end)\nPavel Danilchenko (Back-end)\nAlex Bazan (client success management)\nJenya Andreeva (project management)\nLena Kalachova (motion design)",
+        text: "Credits:\n\nVasilii Podriadchikov (creative direction)\nDenis Valetin (web design)\nMisha Derichenko (brand design)\nVlad Danilchenko (Front-end)\nPavel Danilchenko (Back-end)\nSasha Bazan (client success management)\nJenya Andreeva (project management)\nLena Kalachova (motion design)",
         type: "text",
       },
     ],

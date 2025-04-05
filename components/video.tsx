@@ -27,7 +27,7 @@ export default function Video({ src }: { src: string }) {
       onCanPlay={() => setIsLoaded(true)}
       onPlay={() => setIsLoaded(true)}
       className={cn(
-        "object-cover w-full h-[250px] rounded-2xl snap-center border border-gray-200 bg-gray-300",
+        "object-cover w-full h-auto rounded-2xl snap-center border border-gray-200 bg-gray-300 max-w-4xl",
         !isLoaded && "animate-pulse"
       )}
     />

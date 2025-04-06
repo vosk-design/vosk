@@ -17,7 +17,7 @@ export default function Video({
       ([entry]) => {
         setVisible(entry.isIntersecting);
       },
-      { threshold: 0.25 }
+      { threshold: 0.05, rootMargin: "100px 0px" }
     );
 
     if (videoRef.current) {
@@ -52,7 +52,7 @@ export default function Video({
       preload="none"
       controls={false}
       className={cn(
-        "object-cover w-full rounded-2xl snap-center border border-gray-200 bg-gray-300 max-w-4xl z-10 peer-hover:opacity-25 transition-all duration-300 peer-hover:blur-sm",
+        "object-cover w-full rounded-2xl snap-center border border-gray-200 max-w-4xl z-10 peer-hover:opacity-25 transition-all duration-300 peer-hover:blur-sm",
         isArticle ? "w-full h-full" : "h-[250px]"
       )}
     />

@@ -1,8 +1,14 @@
 "use client";
-
+import { cn } from "@/utils/cn";
 import { useEffect, useRef, useState } from "react";
 
-export default function Video({ src }: { src: string }) {
+export default function Video({
+  src,
+  isArticle,
+}: {
+  src: string;
+  isArticle: boolean;
+}) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -44,8 +50,11 @@ export default function Video({ src }: { src: string }) {
       loop
       playsInline
       preload="none"
-      style={{ width: "100%", height: "auto" }}
       controls={false}
+      className={cn(
+        "object-cover w-full rounded-2xl snap-center border border-gray-200 bg-gray-300 max-w-4xl z-10 peer-hover:opacity-25 transition-all duration-300 peer-hover:blur-sm",
+        isArticle ? "w-full h-full" : "h-[250px]"
+      )}
     />
   );
 }

@@ -1,6 +1,5 @@
 import Video from "@/components/video";
 import { items } from "../items";
-import Image from "next/image";
 import Back from "./back";
 import Link from "next/link";
 export default async function Page({

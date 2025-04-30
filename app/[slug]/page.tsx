@@ -24,7 +24,7 @@ export default async function Page({
           switch (slide.type) {
             case "image":
               return (
-                <Image
+                <img
                   key={index}
                   src={slide.image}
                   alt={slide.text}
@@ -55,7 +55,7 @@ export default async function Page({
           <div className="w-full max-w-4xl rounded-t-2xl overflow-hidden absolute bottom-0 pointer-events-none">
             <div className="relative translate-y-1/2 rounded-t-2xl overflow-hidden pointer-events-auto hover:translate-y-[45%] transition-all duration-300 hover:opacity-80">
               <Link href={`/${nextItem.slug}`}>
-                <Image
+                <img
                   src={nextItemImage}
                   alt={nextItem?.title}
                   width={500}

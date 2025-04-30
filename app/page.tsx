@@ -124,19 +124,14 @@ export default function Home() {
                   .map((slide, index) => {
                     switch (slide.type) {
                       case "image":
-                        const image = slide.image;
-                        const imageWithoutQParams = image.split("q=")[0];
-                        const ImageWithNewQParams = imageWithoutQParams + "q=1";
                         return (
-                          <Image
+                          <img
                             key={index}
                             src={slide.image}
                             alt={slide.text}
                             width={500}
                             height={500}
                             loading="lazy"
-                            placeholder="blur"
-                            blurDataURL={ImageWithNewQParams}
                             className="object-cover w-full h-[250px] rounded-2xl snap-center border border-gray-200"
                           />
                         );

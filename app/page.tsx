@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { items } from "./items";
 import Video from "@/components/video";
 import Link from "next/link";
